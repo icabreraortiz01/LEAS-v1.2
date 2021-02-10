@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="513.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="122.0">
+         <children>
+            <Button fx:id="btnPregunta1" mnemonicParsing="false" onAction="#seleccionarPregunta" prefHeight="34.0" prefWidth="93.0" text="Diapositiva 1">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnPregunta2" mnemonicParsing="false" onAction="#seleccionarPregunta" text="Diapositiva 2">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnPregunta3" mnemonicParsing="false" onAction="#seleccionarPregunta" text="Diapositiva 3">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnPregunta4" mnemonicParsing="false" onAction="#seleccionarPregunta" text="Diapositiva 4">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnPregunta5" mnemonicParsing="false" onAction="#seleccionarPregunta" text="Diapositiva 5">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <GridPane alignment="TOP_CENTER" layoutX="99.0" layoutY="76.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="581.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.99999237060547" minWidth="10.0" prefWidth="88.99999237060547" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="564.0" minWidth="10.0" prefWidth="507.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="84.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextArea fx:id="txtdescripcion" prefHeight="48.0" prefWidth="543.0" promptText="Escriba su pregunta" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS">
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+            </TextArea>
+            <Button mnemonicParsing="false" GridPane.columnIndex="2">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/iconImage.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </GridPane>
+      <GridPane layoutX="86.0" layoutY="315.0" prefHeight="194.0" prefWidth="657.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="319.0" minWidth="10.0" prefWidth="319.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="344.0000305175781" minWidth="10.0" prefWidth="344.0000305175781" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="89.0" vgrow="SOMETIMES" />
+          <RowConstraints fillHeight="false" maxHeight="88.0" minHeight="10.0" prefHeight="81.0" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2D75E8;" stylesheets="@../CSS/Estilo.css">
+               <children>
+                  <RadioButton fx:id="chkBlue1" layoutX="14.0" layoutY="31.0" mnemonicParsing="false" selected="true">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="opciones" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <TextField fx:id="txtBlue1" layoutX="62.0" layoutY="18.0" promptText="Opción 1" />
+                  <Button layoutX="236.0" layoutY="17.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/iconImage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <TextField fx:id="txtBlueUrl" layoutX="64.0" layoutY="52.0" promptText="Nombre Imagen 1" />
+                  <ImageView fx:id="imgBlue1" fitHeight="88.0" fitWidth="109.0" layoutX="59.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FF0000;" stylesheets="@../CSS/Estilo.css" GridPane.columnIndex="1">
+               <children>
+                  <RadioButton fx:id="chkRed2" layoutX="14.0" layoutY="31.0" mnemonicParsing="false" toggleGroup="$opciones" />
+                  <TextField fx:id="txtRed1" layoutX="65.0" layoutY="18.0" promptText="Opción 2" />
+                  <Button layoutX="269.0" layoutY="26.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="56.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/iconImage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <TextField fx:id="txtRedUrl" layoutX="66.0" layoutY="48.0" promptText="Imagen 2" />
+                  <ImageView fx:id="imgRed1" fitHeight="82.0" fitWidth="137.0" layoutX="41.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFF00;" stylesheets="@../CSS/Estilo.css" GridPane.rowIndex="1">
+               <children>
+                  <RadioButton fx:id="chkYellow1" layoutX="14.0" layoutY="32.0" mnemonicParsing="false" toggleGroup="$opciones" />
+                  <TextField fx:id="txtYellow1" layoutX="61.0" layoutY="19.0" promptText="Opción 3" />
+                  <Button layoutX="238.0" layoutY="24.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/iconImage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <TextField fx:id="txtYellowUrl" layoutX="61.0" layoutY="49.0" promptText="Nombre Imagen 3" />
+                  <ImageView fx:id="imgYellow1" fitHeight="82.0" fitWidth="130.0" layoutX="50.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #00FF00;" stylesheets="@../CSS/Estilo.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <RadioButton fx:id="chkGreen1" layoutX="14.0" layoutY="38.0" mnemonicParsing="false" toggleGroup="$opciones" />
+                  <TextField fx:id="txtGreen1" layoutX="67.0" layoutY="14.0" promptText="Opción 4" />
+                  <Button layoutX="263.0" layoutY="27.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="51.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/iconImage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <TextField fx:id="txtGreenUrl" layoutX="69.0" layoutY="43.0" promptText="Nombre Imagen 4" />
+                  <ImageView fx:id="imgGreen1" fitHeight="82.0" fitWidth="120.0" layoutX="51.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+      <Button fx:id="btnGuardar" contentDisplay="CENTER" layoutX="677.0" layoutY="24.0" mnemonicParsing="false" onAction="#oneClicGuardar" prefHeight="33.0" prefWidth="82.0" stylesheets="@../CSS/Estilo.css" text="Guardar" />
+      <AnchorPane fx:id="imgDescripcion" layoutX="260.0" layoutY="134.0" prefHeight="165.0" prefWidth="261.0" stylesheets="@../CSS/Estilo.css" />
+      <ImageView fx:id="logo" fitHeight="51.0" fitWidth="137.0" layoutX="307.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/LEAS1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
